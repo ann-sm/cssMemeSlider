@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Meme Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="">
 </head>
 <body>
-    
+        <div class="container">
+            <input type="radio" name="memes" id="radio-1" checked>
+            <input type="radio" name="memes" id="radio-2">
+            <input type="radio" name="memes" id="radio-3">
+            <input type="radio" name="memes" id="radio-4">
+            <div class="slider">
+                <img id="meme-1" src="assets/meme-github-resume.png" alt="meme-1">
+                <img id="meme-2" src="assets/meme-git-commit.jpeg" alt="meme-2">
+                <img id="meme-3" src="assets/meme-gitignore.jpeg" alt="meme-3">
+                <img id="meme-4" src="assets/meme-pp.jpg" alt="meme-4">
+            </div>
+            <div class="wrapper">
+                <div class="labels-wrapper">
+                    <label for="radio-1" class="radio-label" id="radio-label-1"></label>
+                    <label for="radio-2" class="radio-label" id="radio-label-2"></label>
+                    <label for="radio-3" class="radio-label" id="radio-label-3"></label>
+                    <label for="radio-4" class="radio-label" id="radio-label-4"></label>
+                </div>
+                <div class="caption-wrapper">
+                    <p id="meme-caption-1">Meme caption 1</p>
+                    <p id="meme-caption-2">Meme caption 2</p>
+                    <p id="meme-caption-3">Meme caption 3</p>
+                    <p id="meme-caption-4">Meme caption 4</p>
+                </div>
+            </div>
+    </div>
 </body>
 </html>
