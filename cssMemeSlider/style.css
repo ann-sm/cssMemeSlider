@@ -8,13 +8,14 @@ body {
 p {
     color: white;
     animation: change-caption 0.5s;
+    margin: 0;
 }
 
 .container {
     padding: 2em;
     max-width: 45em;
     margin: auto;
-
+    margin-top: calc((100vh - 30em) / 2);
 }
 
 .slider {
@@ -38,6 +39,12 @@ p {
 }
 
 .labels-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+}
+
+.labels {
     display: flex;
     height: 100%;
 }
@@ -63,6 +70,7 @@ p {
 
 .caption-wrapper {
     display: flex;
+    width: 75%;
 }
 
 
@@ -139,10 +147,10 @@ input {
     display: none;
 }
 
-#radio-1:checked ~ .wrapper .labels-wrapper #radio-label-1 span,
-#radio-2:checked ~ .wrapper .labels-wrapper #radio-label-2 span,
-#radio-3:checked ~ .wrapper .labels-wrapper #radio-label-3 span,
-#radio-4:checked ~ .wrapper .labels-wrapper #radio-label-4 span
+#radio-1:checked ~ .wrapper .labels-wrapper .labels #radio-label-1 span,
+#radio-2:checked ~ .wrapper .labels-wrapper .labels #radio-label-2 span,
+#radio-3:checked ~ .wrapper .labels-wrapper .labels #radio-label-3 span,
+#radio-4:checked ~ .wrapper .labels-wrapper .labels #radio-label-4 span
  {
     background-color: #25282a;
 }
@@ -159,4 +167,27 @@ input {
     }
 }
 
+/* MEDIA */
+@media (max-width: 500px) {
+    .container {
+        margin-top: calc((100vh - 20em) / 2);
+    }
 
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .labels-wrapper {
+        margin-top: 1em;       
+        margin-bottom: 1em;
+        width: 100%;
+    }
+
+    .labels {
+        margin: auto;
+    }
+
+    .caption-wrapper {
+        width: 100%;
+    }
+}
