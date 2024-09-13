@@ -2,69 +2,56 @@
 body {
     margin: 0;
     background-color: #25282a;
+    transition: all 1s;;
 }
 
 p {
     color: white;
+    animation: change-caption 0.5s;
 }
 
 .container {
     padding: 2em;
     max-width: 60em;
-    overflow: hidden;
     margin: auto;
 
-}
-
-
-
-/* .meme-wrapper img {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: auto;
-    object-fit: cover;
-} */
-
-input {
-    display: none;
-}
-
-#radio-1:checked ~ .wrapper .labels-wrapper #radio-label-1,
-#radio-2:checked ~ .wrapper .labels-wrapper #radio-label-2,
-#radio-3:checked ~ .wrapper .labels-wrapper #radio-label-3,
-#radio-4:checked ~ .wrapper .labels-wrapper #radio-label-4
- {
-    background-color: #25282a;
-}
-
-#radio-2:checked ~ .slider #meme-2 {
-    transform: translateX(-100%);
-}
-
-#radio-2:checked ~ .caption-wrapper #meme-caption-2 {
-    transform: translateX(-100%);
 }
 
 .slider {
     display: flex;
     overflow: hidden;
     aspect-ratio: 16 / 9;
-    scroll-behavior: smooth;
     border-radius: 0.5em;
+}
+
+.slider img {
+    object-fit: cover;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    max-width: 100%;
+    transition: transform 2s;
 }
 
 .wrapper {
     display: flex;
     flex-direction: row-reverse;
     justify-content:space-between;
+    align-items: center;
+    margin-top: 1em;
 }
 
 .labels-wrapper {
     display: flex;
+    height: 100%;
 }
 
-.radio-label{
-    /* display: flex; */
+.radio-label {
+    padding: 0.3em;
+}
+
+.radio-label span{
+    display: block;
     width: 0.5em;
     height: 0.5em;
     border-radius: 50%;
@@ -72,10 +59,106 @@ input {
     background-color: #7faae8;
 }
 
-.control-element span:hover {
+.radio-label span:hover {
     background-color: white;
+    border-color: white;
+    cursor: pointer;
 }
 
 .caption-wrapper {
     display: flex;
+}
+
+
+/* SLIDER */
+#radio-1:checked ~ .slider #meme-1 {
+    transform: translateX(0);
+}
+
+#radio-2:checked ~ .slider #meme-2 {
+    transform: translateX(-100%);
+}
+
+#radio-3:checked ~ .slider #meme-3 {
+    transform: translateX(-200%);
+}
+
+#radio-4:checked ~ .slider #meme-4 {
+    transform: translateX(-300%);
+}
+
+/* CAPTIONS */
+#meme-caption-2,
+#meme-caption-3,
+#meme-caption-4 {
+    display: none;
+}
+
+/* Caption #1 */
+#radio-1:checked ~ .wrapper .caption-wrapper #meme-caption-1 {
+    display: block;
+}
+#radio-1:checked ~ .wrapper .caption-wrapper #meme-caption-2,
+#radio-1:checked ~ .wrapper .caption-wrapper #meme-caption-3,
+#radio-1:checked ~ .wrapper .caption-wrapper #meme-caption-4
+ {
+    display: none;
+}
+
+/* Caption #2 */
+#radio-2:checked ~ .wrapper .caption-wrapper #meme-caption-2 {
+    display: block;
+}
+#radio-2:checked ~ .wrapper .caption-wrapper #meme-caption-1,
+#radio-2:checked ~ .wrapper .caption-wrapper #meme-caption-3,
+#radio-2:checked ~ .wrapper .caption-wrapper #meme-caption-4
+ {
+    display: none;
+}
+
+/* Caption #3 */
+#radio-3:checked ~ .wrapper .caption-wrapper #meme-caption-3 {
+    display: block;
+}
+#radio-3:checked ~ .wrapper .caption-wrapper #meme-caption-1,
+#radio-3:checked ~ .wrapper .caption-wrapper #meme-caption-2,
+#radio-3:checked ~ .wrapper .caption-wrapper #meme-caption-4
+ {
+    display: none;
+}
+
+/* Caption #4 */
+#radio-4:checked ~ .wrapper .caption-wrapper #meme-caption-4 {
+    display: block;
+}
+#radio-4:checked ~ .wrapper .caption-wrapper #meme-caption-1,
+#radio-4:checked ~ .wrapper .caption-wrapper #meme-caption-2,
+#radio-4:checked ~ .wrapper .caption-wrapper #meme-caption-3
+ {
+    display: none;
+}
+
+/* RADIOBUTTONS */
+input {
+    display: none;
+}
+
+#radio-1:checked ~ .wrapper .labels-wrapper #radio-label-1 span,
+#radio-2:checked ~ .wrapper .labels-wrapper #radio-label-2 span,
+#radio-3:checked ~ .wrapper .labels-wrapper #radio-label-3 span,
+#radio-4:checked ~ .wrapper .labels-wrapper #radio-label-4 span
+ {
+    background-color: #25282a;
+}
+
+
+/* ANIMATION */
+
+@keyframes change-caption {
+    from {
+        transform: translateX(4em);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
