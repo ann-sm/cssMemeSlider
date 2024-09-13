@@ -65,9 +65,18 @@ p {
     cursor: pointer;
 }
 
+.radio-label:hover > span {
+    background-color: white;
+    border-color: white;
+}
+
 .radio-label span:hover {
     background-color: white;
     border-color: white;
+}
+
+.radio-label:active > span {
+    border-color: grey;
 }
 
 .caption-wrapper {
