@@ -46,11 +46,10 @@ p {
 
 .labels {
     display: flex;
-    height: 100%;
 }
 
 .radio-label {
-    padding: 0.3em;
+    padding: 0.4em;
 }
 
 .radio-label span{
@@ -62,10 +61,13 @@ p {
     background-color: #7faae8;
 }
 
+.radio-label:hover {
+    cursor: pointer;
+}
+
 .radio-label span:hover {
     background-color: white;
     border-color: white;
-    cursor: pointer;
 }
 
 .caption-wrapper {
@@ -168,13 +170,14 @@ input {
 }
 
 /* MEDIA */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .container {
-        margin-top: calc((100vh - 20em) / 2);
+        margin-top: calc((100vh - 25em) / 2);
     }
 
     .wrapper {
         flex-direction: column;
+        margin-top: 0;
     }
 
     .labels-wrapper {
