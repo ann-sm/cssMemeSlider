@@ -12,17 +12,17 @@ p {
 }
 
 .container {
-    padding: 2em;
-    max-width: 45em;
+    padding: 2rem;
+    max-width: 45rem;
     margin: auto;
-    margin-top: calc((100vh - 30em) / 2);
+    margin-top: calc((100vh - 30rem) / 2);
 }
 
 .slider {
     display: flex;
     overflow: hidden;
     aspect-ratio: 16 / 9;
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
 }
 
 .slider-wrapper {
@@ -35,7 +35,7 @@ p {
     flex-direction: row-reverse;
     justify-content:space-between;
     align-items: center;
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 
 .labels-wrapper {
@@ -49,13 +49,13 @@ p {
 }
 
 .radio-label {
-    padding: 0.4em;
+    padding: 0.4rem;
 }
 
 .radio-label span{
     display: block;
-    width: 0.5em;
-    height: 0.5em;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 50%;
     border: 1px solid #7faae8;
     background-color: #7faae8;
@@ -171,7 +171,7 @@ input {
 
 @keyframes change-caption {
     from {
-        transform: translateX(4em);
+        transform: translateX(4rem);
     }
     to {
         transform: translateX(0);
@@ -181,7 +181,7 @@ input {
 /* MEDIA */
 @media (max-width: 768px) {
     .container {
-        margin-top: calc((100vh - 25em) / 2);
+        margin-top: calc((100vh - 25rem) / 2);
     }
 
     .wrapper {
@@ -190,8 +190,8 @@ input {
     }
 
     .labels-wrapper {
-        margin-top: 1em;       
-        margin-bottom: 1em;
+        margin-top: 1rem;       
+        margin-bottom: 1rem;
         width: 100%;
     }
 
